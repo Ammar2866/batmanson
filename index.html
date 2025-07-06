@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label >ENTER YOUR AGE</label><br>
+    <input type="text" id="mytext"><br>
+    <button type="submit" id="mysubmit" >submit</button>
+    <p id="resultelement"></p>
+
+    <script>
+        const mytext = document.getElementById("mytext");
+        const mysubmit = document.getElementById("mysubmit");
+        const resultelement = document.getElementById("resultelement");
+         let age;
+
+        mysubmit.onclick = function () {
+            age= mytext.value;
+            age =Number(age);
+
+            if(age>18){
+                resultelement.textContent ="you are elagible for this site ";
+                
+        }
+        else if (age ==0){
+            resultelement.textContent = "you cross the age of 20";
+            
+        }
+        else if (age>40){
+            resultelement.textContent = "you are  waiting for graveyard";
+        }
+
+        else{
+            resultelement.textContent = "you chossing wrong number";
+        }
+
+        }
+
+
+
+    </script>
+</body>
+</html>
